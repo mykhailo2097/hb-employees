@@ -12,12 +12,15 @@
     align-items: center;
     justify-content: center;
   }
-  .firstName,
-  .lastName,
+  .employees,
   .noEmployees{
     padding: 5px 10px;
   }
+  .noEmployees{
+    letter-spacing: 2px;
+  }
   .checkbox{
+    cursor: pointer;
     margin-left: auto;
   }
 }

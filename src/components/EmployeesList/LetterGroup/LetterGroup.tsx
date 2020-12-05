@@ -9,8 +9,10 @@ export const LetterGroup = ({ employees }: LetterGroupType) => {
       {employees.list.length ? (
         employees.list.map((element) => (
           <div key={element.id} className={styles.employeesInfo}>
-            <div className={styles.lastName}>{element.lastName}</div>
-            <div className={styles.firstName}>{element.firstName}</div>
+            <div className={styles.employees}>
+              {element.lastName}&nbsp;
+              {element.firstName}
+            </div>
             <input className={styles.checkbox} type={"checkbox"} />
           </div>
         ))
