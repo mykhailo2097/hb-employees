@@ -13,7 +13,7 @@ export const Employees = () => {
   return (
     <div className={styles.employersPage}>
       <EmployeesList employees={employees} />
-      <EmployeesBirthday />
+      <EmployeesBirthday selectedEmployees={[]} />
     </div>
   );
 };

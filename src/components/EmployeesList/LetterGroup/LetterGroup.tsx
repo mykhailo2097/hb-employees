@@ -1,8 +1,26 @@
-import React from "react";
+import React, { ChangeEvent, useContext } from "react";
 import { LetterGroupType } from "./type";
 import styles from "./LetterGroup.module.scss";
+import { UsersContext } from "../../../context/UsersContext";
 
 export const LetterGroup = ({ employees }: LetterGroupType) => {
+  const {
+    addUserToSelected,
+    deleteUserFromSelected,
+    selectedUserList,
+  } = useContext(UsersContext);
+
+  const onChangeCheckbox = (
+    event: ChangeEvent<HTMLInputElement>,
+    id: string
+  ) => {
+    if (event.target.checked) {
+      addUserToSelected(id);
+    } else {
+      deleteUserFromSelected(id);
+    }
+  };
+
   return (
     <div className={styles.letterGroup}>
       <div className={styles.alphabet}>{employees.alphabet}</div>
@@ -13,7 +31,12 @@ export const LetterGroup = ({ employees }: LetterGroupType) => {
               {element.lastName}&nbsp;
               {element.firstName}
             </div>
-            <input className={styles.checkbox} type={"checkbox"} />
+            <input
+              onChange={(event) => onChangeCheckbox(event, element.id)}
+              checked={selectedUserList.includes(element.id)}
+              className={styles.checkbox}
+              type={"checkbox"}
+            />
           </div>
         ))
       ) : (
