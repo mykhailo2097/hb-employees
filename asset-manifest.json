@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/hb-employees/static/css/main.1b7f4276.chunk.css",
+    "main.js": "/hb-employees/static/js/main.2e45f4d1.chunk.js",
+    "main.js.map": "/hb-employees/static/js/main.2e45f4d1.chunk.js.map",
+    "runtime-main.js": "/hb-employees/static/js/runtime-main.4943df3b.js",
+    "runtime-main.js.map": "/hb-employees/static/js/runtime-main.4943df3b.js.map",
+    "static/js/2.69f97eee.chunk.js": "/hb-employees/static/js/2.69f97eee.chunk.js",
+    "static/js/2.69f97eee.chunk.js.map": "/hb-employees/static/js/2.69f97eee.chunk.js.map",
+    "index.html": "/hb-employees/index.html",
+    "static/css/main.1b7f4276.chunk.css.map": "/hb-employees/static/css/main.1b7f4276.chunk.css.map",
+    "static/js/2.69f97eee.chunk.js.LICENSE.txt": "/hb-employees/static/js/2.69f97eee.chunk.js.LICENSE.txt",
+    "static/media/present.85cd05ca.svg": "/hb-employees/static/media/present.85cd05ca.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4943df3b.js",
+    "static/js/2.69f97eee.chunk.js",
+    "static/css/main.1b7f4276.chunk.css",
+    "static/js/main.2e45f4d1.chunk.js"
+  ]
+}
