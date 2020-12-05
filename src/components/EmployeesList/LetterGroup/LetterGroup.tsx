@@ -2,8 +2,11 @@ import React, { ChangeEvent, useContext } from "react";
 import { LetterGroupType } from "./type";
 import styles from "./LetterGroup.module.scss";
 import { UsersContext } from "../../../context/UsersContext";
+import { Employees } from "../../../types/type";
 
-export const LetterGroup = ({ employees }: LetterGroupType) => {
+export const LetterGroup: React.FC<LetterGroupType> = ({
+  employees,
+}: LetterGroupType) => {
   const {
     addUserToSelected,
     deleteUserFromSelected,
@@ -12,12 +15,12 @@ export const LetterGroup = ({ employees }: LetterGroupType) => {
 
   const onChangeCheckbox = (
     event: ChangeEvent<HTMLInputElement>,
-    id: string
+    user: Employees
   ) => {
     if (event.target.checked) {
-      addUserToSelected(id);
+      addUserToSelected(user);
     } else {
-      deleteUserFromSelected(id);
+      deleteUserFromSelected(user);
     }
   };
 
@@ -25,15 +28,17 @@ export const LetterGroup = ({ employees }: LetterGroupType) => {
     <div className={styles.letterGroup}>
       <div className={styles.alphabet}>{employees.alphabet}</div>
       {employees.list.length ? (
-        employees.list.map((element) => (
-          <div key={element.id} className={styles.employeesInfo}>
+        employees.list.map((user) => (
+          <div key={user.id} className={styles.employeesInfo}>
             <div className={styles.employees}>
-              {element.lastName}&nbsp;
-              {element.firstName}
+              {user.lastName}&nbsp;
+              {user.firstName}
             </div>
             <input
-              onChange={(event) => onChangeCheckbox(event, element.id)}
-              checked={selectedUserList.includes(element.id)}
+              onChange={(event) => onChangeCheckbox(event, user)}
+              checked={
+                !!selectedUserList.find((employees) => employees.id === user.id)
+              }
               className={styles.checkbox}
               type={"checkbox"}
             />

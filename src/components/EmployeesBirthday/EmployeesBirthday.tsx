@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./EmployeesBirthday.module.scss";
+import { UsersContext } from "../../context/UsersContext";
 
-export const EmployeesBirthday = ({ selectedEmployees }: any) => {
+export const EmployeesBirthday: React.FC = () => {
+  const { selectedUserList } = useContext(UsersContext);
+
   return (
     <div className={styles.birthdayEmployees}>
       <div className={styles.title}>Employees birthday</div>
-      {selectedEmployees.length ? (
+      {selectedUserList.length ? (
         <div></div>
       ) : (
         <div className={styles.noSelected}>No selected employees</div>

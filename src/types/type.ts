@@ -2,23 +2,19 @@ export type Employees = {
   id: string;
   firstName: string;
   lastName: string;
-  dob: Date;
-  checked: boolean;
-};
-
-export type EmployeesType = {
-  employeesList: Array<Employees>;
+  dob: string;
 };
 
 export type EmployeesListType = {
   employeesList: Array<Employees>;
-  selectedUserList: Array<string>;
+  selectedUserList: Array<Employees>;
 };
 
 export type UsersContextType = {
   getEmployees(): void;
-  addUserToSelected(userId: string): void;
-  deleteUserFromSelected(userId: string): void;
-  selectedUserList: Array<string>;
+  restoreSelectedList(): void;
+  addUserToSelected(user: Employees): void;
+  deleteUserFromSelected(user: Employees): void;
+  selectedUserList: Array<Employees>;
   employees: Array<Employees>;
 };

@@ -8,6 +8,7 @@ export const UsersContext = createContext<UsersContextType>({
   getEmployees: noop,
   addUserToSelected: noop,
   deleteUserFromSelected: noop,
+  restoreSelectedList: noop,
   employees: [],
   selectedUserList: [],
 });
@@ -19,6 +20,7 @@ export const UsersProvider: FC = ({ children }) => {
     addUserToSelected,
     deleteUserFromSelected,
     selectedUserList,
+    restoreSelectedList,
   } = useUsers();
 
   return (
@@ -29,6 +31,7 @@ export const UsersProvider: FC = ({ children }) => {
         addUserToSelected,
         selectedUserList,
         deleteUserFromSelected,
+        restoreSelectedList,
       }}
     >
       {children}
