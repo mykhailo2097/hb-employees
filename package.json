@@ -1,10 +1,12 @@
 {
+  "homepage": "http://mykhailo2097.github.io/hb-employees",
   "name": "hb-employees",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.21.0",
     "date-fns": "^2.16.1",
+    "gh-pages": "^3.1.0",
     "node-sass": "4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -14,6 +16,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
