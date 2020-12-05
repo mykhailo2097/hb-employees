@@ -1,6 +1,6 @@
 .birthdayEmployees{
   width: 100vw;
-  background: #f3d1d1;
+  background: #fff;
   .title{
     display: flex;
     justify-content: center;
@@ -8,10 +8,9 @@
     padding: 10px;
     font-size: 24px;
     font-weight: 900;
-    border-bottom: 3px solid white;
   }
   .noSelected{
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
