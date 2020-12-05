@@ -1,0 +1,23 @@
+.letterGroup{
+  padding: 10px;
+  justify-content: space-between;
+  .alphabet{
+    color: #4f4d4d;
+    padding: 5px 10px;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  .employeesInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .firstName,
+  .lastName,
+  .noEmployees{
+    padding: 5px 10px;
+  }
+  .checkbox{
+    margin-left: auto;
+  }
+}
