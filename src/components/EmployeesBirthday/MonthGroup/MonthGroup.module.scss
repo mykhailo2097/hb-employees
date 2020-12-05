@@ -1,0 +1,23 @@
+.monthGroup{
+  padding: 10px;
+  justify-content: space-between;
+  .monthName{
+    color: #4f4d4d;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .userInfo{
+    display: flex;
+    padding: 5px 10px;
+    color: #a75252;
+    font-weight: 900;
+  }
+  svg{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}
