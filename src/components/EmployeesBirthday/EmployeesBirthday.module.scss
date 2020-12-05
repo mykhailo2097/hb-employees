@@ -1,12 +1,21 @@
 .birthdayEmployees{
   width: 100vw;
-  background: #f3d1d1;
+  background: #fff;
   .title{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     font-size: 24px;
+    font-weight: 900;
+  }
+  .noSelected{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #515151;
     font-weight: 900;
   }
 }
