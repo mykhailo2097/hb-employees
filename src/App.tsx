@@ -8,7 +8,6 @@ export const App: React.FC = () => {
   useEffect(() => {
     getEmployees();
     restoreSelectedList();
-    console.log("hello");
   }, []);
 
   return (
