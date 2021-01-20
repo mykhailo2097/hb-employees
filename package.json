@@ -1,6 +1,6 @@
 {
   "homepage": "http://mykhailo2097.github.io/hb-employees",
-  "name": "hb-employees",
+  "name": "hbEmployees",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
